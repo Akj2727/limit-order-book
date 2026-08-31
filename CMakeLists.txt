@@ -10,3 +10,6 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O2 -march=native -DNDEBUG")
 
 add_library(lob INTERFACE)
 target_include_directories(lob INTERFACE include)
+
+add_executable(differential_test tests/differential_test.cpp)
+target_link_libraries(differential_test lob)
